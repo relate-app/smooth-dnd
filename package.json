@@ -2,7 +2,7 @@
   "name": "smooth-dnd",
   "version": "0.12.1",
   "description": "Drag and Drop library",
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "bundle": "rollup -c --environment INCLUDE_DEPS,BUILD:production",
     "tsc": "tsc --emitDeclarationOnly --outDir dist",
