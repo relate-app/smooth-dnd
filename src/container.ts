@@ -171,7 +171,7 @@ function handleDrop({ element, draggables, layout, getOptions }: ContainerProps)
         dropHandler(dropHandlerParams, getOptions().onDrop);
       }
     }
-    setTimeout(draggablesReset, 0);
+    setTimeout(draggablesReset, 100);
   };
 }
 
