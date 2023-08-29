@@ -157,8 +157,6 @@ function handleDrop({ element, draggables, layout, getOptions }: ContainerProps)
   const draggablesReset = resetDraggables({ element, draggables, layout, getOptions });
   const dropHandler = (smoothDnD.dropHandler || domDropHandler)({ element, draggables, layout, getOptions });
   return function (draggableInfo: DraggableInfo, { addedIndex, removedIndex }: DragResult, forDispose: boolean = false) {
-    // draggablesReset();
-    console.log('yolo');
     // if drop zone is valid => complete drag else do nothing everything will be reverted by draggablesReset()
     if (!draggableInfo.cancelDrop) {
       if (draggableInfo.targetElement || getOptions().removeOnDropOut || forDispose) {
@@ -173,6 +171,7 @@ function handleDrop({ element, draggables, layout, getOptions }: ContainerProps)
         dropHandler(dropHandlerParams, getOptions().onDrop);
       }
     }
+    setTimeout(draggablesReset, 0);
   };
 }
 
